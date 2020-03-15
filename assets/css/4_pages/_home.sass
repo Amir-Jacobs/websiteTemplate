@@ -1,0 +1,135 @@
+#home
+    #content
+        & > :nth-child(n + 1)
+            padding: 65px 0
+
+    #introduction
+        background: $primary_light
+        text-align: center
+        color: $white
+
+        .picture
+            margin: 0 auto 35px
+            overflow: hidden
+            border-radius: 50%
+            position: relative
+            width: 240px
+            height: 240px
+            border: 6px solid #ffffff
+
+            img
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translateX(-50%) translateY(-50%)
+                max-width: 101%
+                width: 100%
+
+
+        h1
+            margin-bottom: 40px
+
+            &::after
+                max-width: 220px
+
+    #projects
+        
+        h2
+            text-transform: uppercase
+            text-align: center
+            margin-top: 0
+            margin-bottom: 65px
+
+            &::after
+                max-width: 160px
+                background: $primary_dark
+
+        .projectBlock
+            
+            .row
+                display: flex
+
+                .project
+                    flex-grow: 1
+                    background: $primary_dark
+                    height: 300px
+                    border: 3px solid lighten($primary_dark, 20)
+
+    #about
+        background: $primary_light
+
+        h3
+            text-transform: uppercase
+            color: $white
+            text-align: center
+            margin-top: 0
+            margin-bottom: 65px
+
+            &::after
+                max-width: 170px
+                background-color: $white
+
+        p
+            color: $white
+            margin: 0 auto
+            max-width: 850px
+            text-align: center
+
+    #skills
+        background: darken($primary_light, 3)
+        color: $white
+
+        h3
+            text-transform: uppercase
+            text-align: center
+            margin-top: 0
+            margin-bottom: 65px
+
+            &::after
+                max-width: 105px
+                background-color: $white
+
+
+        h4
+            margin-top: 0
+
+        .row
+            display: flex
+
+            & > div
+                flex-grow: 1
+
+            & > :nth-child(2)
+                text-align: center
+
+            & > :last-child
+                text-align: right
+
+
+@media screen and (max-width: 767px)
+    #home
+        #content
+            text-align: center
+            padding-top: 0
+
+            & > :nth-child(n + 1)
+                padding: 65px 15px
+
+            .row
+                display: block
+
+        #projects
+            .projectBlock
+                & > div:not(:first-child)
+                    display: none!important
+        
+        #skills
+            .row
+                & > div
+                    margin-left: 0
+                    text-align: center!important
+
+                & > :nth-child(2),
+                & > :nth-child(3)
+                    margin-top: 65px
+

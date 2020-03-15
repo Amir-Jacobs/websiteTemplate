@@ -1,0 +1,94 @@
+header
+    color: $white
+    font-weight: bold
+    background: $primary_dark
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    width: 100%
+    z-index: 100
+
+    a
+        font-family: Montserrat
+        color: $white
+        font-weight: bold
+        transition: 0.3s ease all
+
+    .container
+        display: flex
+        justify-content: center
+        padding: 40px 0
+
+    .left, .right
+        flex-grow: 1
+
+    .left
+        display: flex
+
+        .logo
+            font-size: 30px
+            margin-right: 30px
+            display: flex
+            align-items: center
+
+        .icon
+            margin-right: 10px
+
+        .social
+            display: flex
+
+    .right
+        text-align: right
+        justify-content: flex-end
+        display: flex
+        align-items: center
+
+        a
+            &:not(.highlighted):hover
+                background-color: $primary_light
+                box-shadow: 0px 0px 0px 3px $primary_light
+
+        a:not(:first-child)
+            margin-left: 30px
+
+        .highlighted
+            box-shadow: 0px 0px 0px 10px $primary_light
+            background-color: $primary_light
+
+
+
+@media screen and (max-width: 776px)
+    header
+        position: relative
+
+        .container
+            display: block
+            padding: 15px
+
+            .left
+                display: block
+
+                .logo
+                    width: 100%
+                    text-align: center
+                    display: block
+
+                .social
+                    justify-content: center
+                    margin-bottom: 20px
+
+                a
+                    padding: 20px 5px 20px 0
+
+            .right
+                flex-direction: column
+                padding: 0
+                text-align: center
+
+                a
+                    margin-top: 10px
+                    margin-left: 0
+
+                    &.highlighted
+                        box-shadow: 0px 0px 0px 3px $primary_light
+
